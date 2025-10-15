@@ -10,9 +10,9 @@ export function Header() {
           <Image
             src="https://i.imgur.com/T5k3Fpy.png"
             alt="Promptify Logo"
-            width={160}
-            height={40}
-            className="w-40 h-auto"
+            width={200}
+            height={50}
+            className="w-48 h-auto"
           />
         </Link>
         <Button asChild className="button-glow bg-gradient-to-r from-primary to-accent text-primary-foreground font-bold">
