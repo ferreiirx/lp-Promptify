@@ -26,7 +26,7 @@ export function Hero() {
 
       <div className="relative flex h-full min-h-[300px] w-full items-center justify-center">
         {heroMockup && (
-          <div className="animate-float" style={{ transformStyle: "preserve-3d" }}>
+          <div className="animate-float w-full" style={{ transformStyle: "preserve-3d" }}>
             <div
               className="transform-gpu transition-transform duration-500 ease-out hover:scale-105"
               style={{ transform: "perspective(1200px) rotateY(-20deg) rotateX(10deg)" }}
@@ -37,7 +37,7 @@ export function Hero() {
                 width={600}
                 height={450}
                 data-ai-hint={heroMockup.imageHint}
-                className="rounded-xl shadow-2xl shadow-primary/20"
+                className="rounded-xl shadow-2xl shadow-primary/20 w-full h-auto"
               />
             </div>
           </div>
