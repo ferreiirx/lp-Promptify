@@ -7,10 +7,10 @@ export function Hero() {
   const heroMockup = PlaceHolderImages.find(p => p.id === 'hero-mockup');
 
   return (
-    <section id="inicio" className="container grid min-h-[calc(100vh-80px)] grid-cols-1 items-center gap-12 py-20 md:grid-cols-2">
+    <section id="inicio" className="container grid min-h-[calc(100vh-80px)] grid-cols-1 items-center gap-12 py-20 md:grid-cols-2 overflow-x-hidden md:overflow-x-visible">
       <div className="flex flex-col items-center text-center md:items-start md:text-left">
         <h1 className="font-headline text-4xl font-extrabold tracking-tight text-white md:text-5xl lg:text-6xl">
-          <span className="text-glow">⚡️ Esse novo Aplicativo de Inteligência Artificial</span> Cria Vídeos em apenas 1 clique.
+          <span className="text-glow">⚡️ Crie vídeos com IA</span> em 1 clique.
         </h1>
         <p className="mt-4 max-w-2xl text-lg text-muted-foreground md:text-xl">
           Mesmo sem entender nada de IA. Modelos prontos, simples e rápidos.
