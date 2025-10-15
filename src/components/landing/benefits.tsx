@@ -60,13 +60,13 @@ export function Benefits() {
             </div>
           ))}
         </div>
-        <div className="mt-16 grid grid-cols-1 gap-6 md:grid-cols-3 lg:grid-cols-5">
+        <div className="mt-16 grid grid-cols-1 gap-6 md:grid-cols-3">
           {benefitCards.map((card, index) => (
             <div
               key={index}
-              className="flex flex-col items-center justify-center gap-4 rounded-xl border border-primary/20 bg-white/5 p-6 text-center backdrop-blur-sm"
+              className="flex items-center gap-4 rounded-xl border border-primary/20 bg-white/5 p-6 backdrop-blur-sm"
             >
-              <div className="rounded-lg bg-primary/10 p-3 text-primary">
+              <div className="flex-shrink-0 rounded-lg bg-primary/10 p-3 text-primary">
                 <card.icon className="h-8 w-8" />
               </div>
               <h3 className="text-lg font-semibold">{card.title}</h3>
