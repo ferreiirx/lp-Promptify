@@ -1,22 +1,18 @@
-import { BookOpenText, Gift, Puzzle, Smartphone, Zap } from "lucide-react";
-import { Card } from "@/components/ui/card";
-import type { LucideIcon } from "lucide-react";
+import Image from "next/image";
 
-const benefits = [
-  { icon: BookOpenText, text: "Curso completo 'Conteúdo com IA'" },
-  { icon: Zap, text: "+100 prompts prontos por categoria" },
-  { icon: Smartphone, text: "Funciona no celular e no computador" },
-  { icon: Gift, text: "Novos prompts todos os dias" },
-  { icon: Puzzle, text: "Acesso a ferramentas exclusivas de IA" },
+const banners = [
+  { src: "https://i.imgur.com/joKxQdy.png", alt: "Banner Bônus 1" },
+  { src: "https://i.imgur.com/EENykAt.png", alt: "Banner Bônus 2" },
+  { src: "https://i.imgur.com/ZO3PPCz.png", alt: "Banner Bônus 3" },
+  { src: "https://i.imgur.com/SznFDcb.png", alt: "Banner Bônus 4" },
+  { src: "https://i.imgur.com/ioOdH6P.png", alt: "Banner Bônus 5" },
+  { src: "https://i.imgur.com/FkCB9vv.png", alt: "Banner Bônus 6" },
+  { src: "https://i.imgur.com/f2d5hyJ.png", alt: "Banner Bônus 7" },
+  { src: "https://i.imgur.com/s99O2g8.png", alt: "Banner Bônus 8" },
+  { src: "https://i.imgur.com/MIfx0hg.png", alt: "Banner Bônus 9" },
+  { src: "https://i.imgur.com/FWT7Zdc.png", alt: "Banner Bônus 10" },
+  { src: "https://i.imgur.com/w8gk0uW.png", alt: "Banner Bônus 11" },
 ];
-
-function IconWrapper({ icon: Icon }: { icon: LucideIcon }) {
-  return (
-    <div className="rounded-lg bg-primary/10 p-3">
-      <Icon className="h-8 w-8 text-primary" />
-    </div>
-  );
-}
 
 export function Benefits() {
   return (
@@ -27,13 +23,22 @@ export function Benefits() {
             Além do acesso ao app, você ainda ganha 👇
           </h2>
         </div>
-        <div className="mx-auto mt-16 grid max-w-5xl grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {benefits.map((benefit, index) => (
-            <Card key={index} className="flex transform-gpu items-center gap-4 border-primary/20 bg-white/5 p-6 backdrop-blur-sm transition-all hover:-translate-y-2 hover:border-primary/40 hover:bg-white/10">
-              <IconWrapper icon={benefit.icon} />
-              <p className="text-lg font-semibold">{benefit.text}</p>
-            </Card>
+      </div>
+      <div className="relative mt-16">
+        <div className="flex w-full space-x-6 overflow-x-auto pb-8">
+          <div className="flex-shrink-0" />
+          {banners.map((banner, index) => (
+            <div key={index} className="flex-shrink-0 w-80">
+              <Image
+                src={banner.src}
+                alt={banner.alt}
+                width={320}
+                height={320}
+                className="rounded-lg object-cover"
+              />
+            </div>
           ))}
+          <div className="flex-shrink-0" />
         </div>
       </div>
     </section>
