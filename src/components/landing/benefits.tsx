@@ -23,7 +23,7 @@ export function Benefits() {
             Além do acesso ao app, você ainda ganha 👇
           </h2>
         </div>
-        <div className="mt-16 grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-8">
+        <div className="mt-16 grid grid-cols-2 gap-4 md:grid-cols-6 md:gap-8">
           {banners.map((banner, index) => (
             <div key={index} className="overflow-hidden rounded-lg">
               <Image
