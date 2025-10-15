@@ -30,13 +30,13 @@ export function Testimonials() {
         </div>
         <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {testimonials.map((testimonial) => (
-            <div key={testimonial.alt} className="overflow-hidden rounded-lg border-primary/20 bg-white/5 backdrop-blur-sm">
+            <div key={testimonial.alt} className="overflow-hidden rounded-lg border-2 border-primary/50 bg-white/5 backdrop-blur-sm">
               <Image
                 src={testimonial.src}
                 alt={testimonial.alt}
                 width={300}
                 height={550}
-                className="h-full w-full object-cover"
+                className="h-auto w-full object-contain"
               />
             </div>
           ))}
