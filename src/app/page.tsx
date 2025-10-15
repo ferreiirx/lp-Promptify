@@ -9,7 +9,7 @@ import { Footer } from '@/components/landing/footer';
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen w-full flex-col bg-gradient-to-b from-black to-[#1a1a1a] text-white">
+    <div className="flex min-h-screen w-full flex-col bg-gradient-to-br from-[#1E0A40] via-[#0D122B] to-black text-white">
       <Header />
       <main className="flex-1">
         <Hero />
