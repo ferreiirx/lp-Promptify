@@ -1,29 +1,21 @@
 import Image from "next/image";
-import { Star } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const testimonials = [
   {
-    name: "Julia Alves",
-    role: "Social Media",
-    text: "O Promptify mudou meu jogo! Crio posts virais em minutos. É como ter uma equipe de criação no bolso.",
-    rating: 5.0,
-    avatarId: "testimonial-avatar-1"
+    src: "https://i.imgur.com/x5wuFfr.png",
+    alt: "Depoimento de cliente 1",
   },
   {
-    name: "Marcos Andrade",
-    role: "Infoprodutor",
-    text: "Incrível! As ideias de roteiros para vídeos são ouro puro. Minhas vendas aumentaram depois que comecei a usar.",
-    rating: 4.9,
-    avatarId: "testimonial-avatar-2"
+    src: "https://i.imgur.com/59YyMEM.jpeg",
+    alt: "Depoimento de cliente 2",
   },
   {
-    name: "Carla Pires",
-    role: "Empreendedora",
-    text: "Nunca foi tão fácil criar conteúdo. A ferramenta é super intuitiva e os prompts são muito criativos.",
-    rating: 5.0,
-    avatarId: "testimonial-avatar-3"
+    src: "https://i.imgur.com/mXjMJli.png",
+    alt: "Depoimento de cliente 3",
+  },
+  {
+    src: "https://i.imgur.com/QoUKn5l.png",
+    alt: "Depoimento de cliente 4",
   },
 ];
 
@@ -36,41 +28,18 @@ export function Testimonials() {
             O que nossos usuários estão dizendo 💫
           </h2>
         </div>
-        <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {testimonials.map((testimonial) => {
-            const avatar = PlaceHolderImages.find(p => p.id === testimonial.avatarId);
-            return (
-              <Card key={testimonial.name} className="flex flex-col border-primary/20 bg-white/5 backdrop-blur-sm">
-                <CardContent className="flex flex-1 flex-col p-6">
-                  <div className="flex items-center gap-2">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className={`h-5 w-5 ${i < Math.floor(testimonial.rating) ? 'text-primary fill-primary' : 'text-primary/50'}`} />
-                    ))}
-                    <span className="font-bold">{testimonial.rating.toFixed(1)}/5.0</span>
-                  </div>
-                  <blockquote className="mt-4 flex-1 text-lg text-white">
-                    "{testimonial.text}"
-                  </blockquote>
-                  <div className="mt-6 flex items-center gap-4">
-                    {avatar && (
-                      <Image
-                        src={avatar.imageUrl}
-                        alt={avatar.description}
-                        width={48}
-                        height={48}
-                        data-ai-hint={avatar.imageHint}
-                        className="rounded-full"
-                      />
-                    )}
-                    <div>
-                      <p className="font-semibold">{testimonial.name}</p>
-                      <p className="text-sm text-muted-foreground">{testimonial.role}</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            );
-          })}
+        <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          {testimonials.map((testimonial) => (
+            <div key={testimonial.alt} className="overflow-hidden rounded-lg border-primary/20 bg-white/5 backdrop-blur-sm">
+              <Image
+                src={testimonial.src}
+                alt={testimonial.alt}
+                width={300}
+                height={550}
+                className="h-full w-full object-cover"
+              />
+            </div>
+          ))}
         </div>
       </div>
     </section>
