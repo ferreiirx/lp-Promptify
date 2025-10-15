@@ -23,22 +23,18 @@ export function Benefits() {
             Além do acesso ao app, você ainda ganha 👇
           </h2>
         </div>
-      </div>
-      <div className="relative mt-16">
-        <div className="flex w-full space-x-6 overflow-x-auto pb-8">
-          <div className="flex-shrink-0" />
+        <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2">
           {banners.map((banner, index) => (
-            <div key={index} className="flex-shrink-0 w-80">
+            <div key={index} className="overflow-hidden rounded-lg">
               <Image
                 src={banner.src}
                 alt={banner.alt}
-                width={320}
-                height={320}
-                className="rounded-lg object-cover"
+                width={600}
+                height={600}
+                className="h-full w-full object-cover"
               />
             </div>
           ))}
-          <div className="flex-shrink-0" />
         </div>
       </div>
     </section>
