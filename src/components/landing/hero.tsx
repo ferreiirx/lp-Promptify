@@ -1,10 +1,18 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 export function Hero() {
   return (
     <section id="inicio" className="container flex items-center justify-center min-h-[calc(100vh-80px)] py-20">
       <div className="flex flex-col items-center text-center max-w-3xl">
+        <Image 
+          src="https://i.imgur.com/8WxZksn.png"
+          alt="Selo de garantia"
+          width={400}
+          height={100}
+          className="mb-8"
+        />
         <h1 className="font-headline text-4xl font-extrabold tracking-tight text-white md:text-5xl lg:text-6xl">
           <span className="text-glow">⚡️ Esse novo Aplicativo de Inteligência Artificial</span> Cria Vídeos em apenas 1 clique.
         </h1>
