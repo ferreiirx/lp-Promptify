@@ -1,0 +1,49 @@
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Lock, Mail, MessageSquare } from "lucide-react";
+
+const trustPoints = [
+  { icon: Mail, text: "Receba acesso imediato por e-mail" },
+  { icon: MessageSquare, text: "Suporte 24h via WhatsApp" },
+  { icon: Lock, text: "Pagamento único, sem mensalidade" },
+];
+
+export function Offer() {
+  return (
+    <section id="oferta" className="py-20 sm:py-32">
+      <div className="container">
+        <div className="mx-auto max-w-3xl text-center">
+          <h2 className="font-headline text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl text-glow">
+            ⚡ OFERTA LIMITADA
+          </h2>
+          <p className="mt-4 text-xl text-muted-foreground">
+            É sua chance de dominar o Promptify com 70% OFF
+          </p>
+        </div>
+        <Card className="mx-auto mt-12 max-w-lg border-2 border-primary bg-gradient-to-br from-white/10 to-transparent p-1 card-glow">
+          <CardContent className="flex flex-col items-center p-8 text-center">
+            <p className="text-xl text-muted-foreground line-through">De R$197 por</p>
+            <p className="my-2 font-headline text-7xl font-bold">
+              R$37
+            </p>
+            <p className="mb-8 font-semibold text-lg">Acesso completo ao App + Curso</p>
+            <Button asChild size="lg" className="w-full text-lg font-bold button-glow bg-gradient-to-r from-primary to-accent text-primary-foreground">
+              <Link href="#">
+                💥 QUERO GARANTIR MEU ACESSO
+              </Link>
+            </Button>
+          </CardContent>
+        </Card>
+        <div className="mt-12 flex flex-wrap justify-center gap-x-8 gap-y-4">
+          {trustPoints.map((point, index) => (
+            <div key={index} className="flex items-center gap-3">
+              <point.icon className="h-5 w-5 text-primary" />
+              <span className="text-muted-foreground">{point.text}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
