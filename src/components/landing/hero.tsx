@@ -13,9 +13,7 @@ export function Hero() {
           <span className="text-glow">⚡️ Crie vídeos com IA</span> em 1 clique.
         </h1>
         <p className="mt-4 max-w-2xl text-lg text-muted-foreground md:text-xl">
-          Mesmo sem entender nada de IA. Modelos prontos, simples e rápidos.
-          <br className="hidden sm:block" />
-          🚀 Transforme ideias em vídeos, posts e roteiros virais com apenas 1 clique.
+          Transforme ideias em vídeos, posts e roteiros virais com apenas 1 clique.
         </p>
         <Button asChild size="lg" className="mt-8 button-glow bg-gradient-to-r from-primary to-accent text-primary-foreground text-lg font-bold">
           <Link href="#oferta">
