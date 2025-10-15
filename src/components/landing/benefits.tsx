@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { BookOpen, Gift, Smartphone, Wand, Zap } from "lucide-react";
 
 const banners = [
   { src: "https://i.imgur.com/joKxQdy.png", alt: "Banner Bônus 1" },
@@ -12,6 +13,29 @@ const banners = [
   { src: "https://i.imgur.com/MIfx0hg.png", alt: "Banner Bônus 9" },
   { src: "https://i.imgur.com/FWT7Zdc.png", alt: "Banner Bônus 10" },
   { src: "https://i.imgur.com/w8gk0uW.png", alt: "Banner Bônus 11" },
+];
+
+const benefitCards = [
+  {
+    icon: BookOpen,
+    title: "Curso completo 'Conteúdo com IA'",
+  },
+  {
+    icon: Zap,
+    title: "+100 prompts prontos por categoria",
+  },
+  {
+    icon: Smartphone,
+    title: "Funciona no celular e no computador",
+  },
+  {
+    icon: Gift,
+    title: "Novos prompts todos os dias",
+  },
+  {
+    icon: Wand,
+    title: "Acesso a ferramentas exclusivas de IA",
+  },
 ];
 
 export function Benefits() {
@@ -33,6 +57,19 @@ export function Benefits() {
                 height={600}
                 className="h-full w-full object-cover"
               />
+            </div>
+          ))}
+        </div>
+        <div className="mt-16 grid grid-cols-1 gap-6 md:grid-cols-3 lg:grid-cols-5">
+          {benefitCards.map((card, index) => (
+            <div
+              key={index}
+              className="flex flex-col items-center justify-center gap-4 rounded-xl border border-primary/20 bg-white/5 p-6 text-center backdrop-blur-sm"
+            >
+              <div className="rounded-lg bg-primary/10 p-3 text-primary">
+                <card.icon className="h-8 w-8" />
+              </div>
+              <h3 className="text-lg font-semibold">{card.title}</h3>
             </div>
           ))}
         </div>
