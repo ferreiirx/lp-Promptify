@@ -10,7 +10,7 @@ export function Hero() {
     <section id="inicio" className="container grid min-h-[calc(100vh-80px)] grid-cols-1 items-center gap-12 py-20 md:grid-cols-2">
       <div className="flex flex-col items-center text-center md:items-start md:text-left">
         <h1 className="font-headline text-4xl font-extrabold tracking-tight text-white md:text-5xl lg:text-6xl">
-          <span className="text-glow">⚡️ O novo App de Inteligência Artificial</span> que cria conteúdo em segundos.
+          <span className="text-glow">⚡️ Esse novo Aplicativo de Inteligência Artificial</span> Cria Vídeos em apenas 1 clique.
         </h1>
         <p className="mt-4 max-w-2xl text-lg text-muted-foreground md:text-xl">
           Mesmo sem entender nada de IA. Modelos prontos, simples e rápidos. 
