@@ -3,7 +3,6 @@ import { BookOpen, Gift, Smartphone, Wand, Zap } from "lucide-react";
 
 const banners = [
   { src: "https://i.imgur.com/joKxQdy.png", alt: "Banner Bônus 1" },
-  { src: "https://i.imgur.com/EENykAt.png", alt: "Banner Bônus 2" },
   { src: "https://i.imgur.com/ZO3PPCz.png", alt: "Banner Bônus 3" },
   { src: "https://i.imgur.com/SznFDcb.png", alt: "Banner Bônus 4" },
   { src: "https://i.imgur.com/ioOdH6P.png", alt: "Banner Bônus 5" },
