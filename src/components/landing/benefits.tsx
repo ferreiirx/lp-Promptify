@@ -5,7 +5,7 @@ const banners = [
   { src: "https://i.imgur.com/joKxQdy.png", alt: "Banner Bônus 1" },
   { src: "https://i.imgur.com/ZO3PPCz.png", alt: "Banner Bônus 3" },
   { src: "https://i.imgur.com/SznFDcb.png", alt: "Banner Bônus 4" },
-  { src: "https://i.imgur.com/ioOdH6P.png", alt: "Banner Bônus 5" },
+  { src: "https://i.imgur.com/pGhk9CB.png", alt: "Banner Bônus 5" },
   { src: "https://i.imgur.com/FkCB9vv.png", alt: "Banner Bônus 6" },
   { src: "https://i.imgur.com/f2d5hyJ.png", alt: "Banner Bônus 7" },
   { src: "https://i.imgur.com/s99O2g8.png", alt: "Banner Bônus 8" },
