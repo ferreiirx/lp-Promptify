@@ -1,12 +1,21 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Lock, Mail, MessageSquare } from "lucide-react";
+import { CheckCircle, Lock, Mail, MessageSquare } from "lucide-react";
 
 const trustPoints = [
   { icon: Mail, text: "Receba acesso imediato por e-mail" },
   { icon: MessageSquare, text: "Suporte 24h via WhatsApp" },
   { icon: Lock, text: "Pagamento único, sem mensalidade" },
+];
+
+const includedBenefits = [
+  "Acesso completo ao App Promptify",
+  "Curso 'Conteúdo com IA'",
+  "+100 prompts prontos por categoria",
+  "Acesso a ferramentas exclusivas de IA",
+  "Novos prompts todos os dias",
+  "Suporte prioritário via WhatsApp",
 ];
 
 export function Offer() {
@@ -27,7 +36,14 @@ export function Offer() {
             <p className="my-2 font-headline text-7xl font-bold">
               R$37
             </p>
-            <p className="mb-8 font-semibold text-lg">Acesso completo ao App + Curso</p>
+            <div className="my-8 w-full space-y-3 text-left">
+              {includedBenefits.map((benefit, index) => (
+                <div key={index} className="flex items-center gap-3">
+                  <CheckCircle className="h-5 w-5 flex-shrink-0 text-primary" />
+                  <span className="text-muted-foreground">{benefit}</span>
+                </div>
+              ))}
+            </div>
             <Button asChild size="lg" className="w-full text-lg font-bold button-glow bg-gradient-to-r from-primary to-accent text-primary-foreground">
               <Link href="#">
                 💥 QUERO GARANTIR MEU ACESSO
