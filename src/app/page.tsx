@@ -4,6 +4,7 @@ import { Benefits } from '@/components/landing/benefits';
 import { Demo } from '@/components/landing/demo';
 import { Testimonials } from '@/components/landing/testimonials';
 import { Offer } from '@/components/landing/offer';
+import { Guarantee } from '@/components/landing/guarantee';
 import { Faq } from '@/components/landing/faq';
 import { Footer } from '@/components/landing/footer';
 
@@ -17,6 +18,7 @@ export default function Home() {
         <Demo />
         <Testimonials />
         <Offer />
+        <Guarantee />
         <Faq />
       </main>
       <Footer />
