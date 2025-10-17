@@ -20,7 +20,7 @@ const includedBenefits = [
 
 export function Offer() {
   return (
-    <section id="oferta" className="py-20 sm:py-32">
+    <section id="oferta" className="py-20 sm:py-32 scroll-mt-20">
       <div className="container">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="font-headline text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl text-glow">
