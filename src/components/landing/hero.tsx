@@ -2,7 +2,6 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { WistiaPlayer } from '@/components/wistia-player';
 
 export function Hero() {
   const heroMockup = PlaceHolderImages.find(p => p.id === 'hero-mockup');
@@ -19,18 +18,10 @@ export function Hero() {
             clique.
           </p>
 
-          {/* Video for Mobile */}
-          <div className="mt-8 w-full md:hidden">
-            <WistiaPlayer videoId="z8wdcq9z18" />
-            <p className="mt-4 text-center text-sm text-muted-foreground">
-              Assista ao vídeo para ver como funciona:
-            </p>
-          </div>
-
           <Button
             asChild
             size="lg"
-            className="mt-4 button-glow w-full sm:w-auto bg-gradient-to-r from-primary to-accent text-primary-foreground text-lg font-bold"
+            className="mt-8 button-glow w-full sm:w-auto bg-gradient-to-r from-primary to-accent text-primary-foreground text-lg font-bold"
           >
             <Link href="#oferta">
               💥 Quero acessar o Promptify agora!
@@ -63,16 +54,6 @@ export function Hero() {
               </div>
             </div>
           )}
-        </div>
-      </div>
-
-      {/* Video for Desktop */}
-      <div className="mt-20 hidden w-full max-w-4xl flex-col items-center md:flex">
-        <h2 className="text-center font-headline text-3xl font-bold tracking-tight text-white">
-          Veja como é fácil criar conteúdo viral:
-        </h2>
-        <div className="mt-8 w-full">
-          <WistiaPlayer videoId="z8wdcq9z18" />
         </div>
       </div>
     </section>
