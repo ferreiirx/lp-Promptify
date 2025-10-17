@@ -31,7 +31,7 @@ export function Demo() {
           </p>
         </div>
         <div className="relative mt-16">
-          <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-3 md:gap-16">
+          <div className="grid grid-cols-1 items-start gap-16 md:grid-cols-3 md:gap-16">
             {steps.map((step, index) => (
               <div key={index} className="relative flex flex-col items-center text-center">
                 <div className="flex flex-col items-center">
@@ -43,8 +43,8 @@ export function Demo() {
                 </div>
                 {index < steps.length - 1 && (
                   <>
-                    <ArrowRight className="absolute top-1/2 -right-8 hidden -translate-y-1/2 text-primary/30 md:block" size={48} />
-                    <ArrowDown className="absolute left-1/2 -bottom-12 -translate-x-1/2 text-primary/30 md:hidden" size={48} />
+                    <ArrowRight className="absolute top-8 -right-8 hidden text-primary/30 md:block" size={48} />
+                    <ArrowDown className="absolute left-1/2 -bottom-10 -translate-x-1/2 text-primary/30 md:hidden" size={48} />
                   </>
                 )}
               </div>
