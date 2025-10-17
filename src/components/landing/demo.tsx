@@ -1,8 +1,22 @@
-import Image from "next/image";
-import { PlayCircle } from "lucide-react";
-import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { FileText, Wand2, ArrowRight, Video } from "lucide-react";
 
-const demoImage = PlaceHolderImages.find(p => p.id === 'demo-video');
+const steps = [
+  {
+    icon: FileText,
+    title: "1. Escolha um Prompt",
+    description: "Selecione um dos nossos prompts prontos ou crie o seu.",
+  },
+  {
+    icon: Wand2,
+    title: "2. Gere o Conteúdo",
+    description: "A IA cria o roteiro, a narração e as cenas para você.",
+  },
+  {
+    icon: Video,
+    title: "3. Exporte e Publique",
+    description: "Baixe seu vídeo em alta qualidade e viralize.",
+  },
+];
 
 export function Demo() {
   return (
@@ -10,29 +24,29 @@ export function Demo() {
       <div className="container">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="font-headline text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Veja como é fácil criar vídeos e conteúdos virais
+            É fácil como 1, 2, 3...
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            Assista a uma rápida demonstração da interface do Promptify e veja trechos de aulas e resultados gerados pela nossa IA.
+            Siga estes passos simples para transformar suas ideias em vídeos incríveis em questão de segundos.
           </p>
         </div>
-        <div className="relative mt-16 mx-auto max-w-5xl">
-          {demoImage && (
-            <div className="group relative aspect-video w-full cursor-pointer overflow-hidden rounded-2xl border-2 border-primary/20 card-glow">
-              <Image
-                src={demoImage.imageUrl}
-                alt={demoImage.description}
-                fill
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                data-ai-hint={demoImage.imageHint}
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-black/40" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <PlayCircle className="h-20 w-20 text-white/70 transition-all group-hover:h-24 group-hover:w-24 group-hover:text-white" />
+        <div className="relative mt-16">
+          <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-3 md:gap-16">
+            {steps.map((step, index) => (
+              <div key={index} className="relative flex flex-col items-center text-center">
+                <div className="flex flex-col items-center">
+                  <div className="flex h-20 w-20 items-center justify-center rounded-full border-2 border-primary/30 bg-white/5 backdrop-blur-sm card-glow">
+                    <step.icon className="h-10 w-10 text-primary" />
+                  </div>
+                  <h3 className="mt-6 text-xl font-bold">{step.title}</h3>
+                  <p className="mt-2 text-muted-foreground">{step.description}</p>
+                </div>
+                {index < steps.length - 1 && (
+                  <ArrowRight className="absolute top-1/2 -right-8 hidden -translate-y-1/2 text-primary/30 md:block" size={48} />
+                )}
               </div>
-            </div>
-          )}
+            ))}
+          </div>
         </div>
       </div>
     </section>
