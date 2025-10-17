@@ -55,7 +55,7 @@ export function Hero() {
         <div className="relative hidden h-full min-h-[300px] w-full items-center justify-center md:flex">
           {heroMockup && (
             <div
-              className="animate-float w-full"
+              className="animate-float w-full max-w-md"
               style={{ transformStyle: 'preserve-3d' }}
             >
               <div

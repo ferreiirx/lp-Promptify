@@ -45,8 +45,8 @@ export function Offer() {
               ))}
             </div>
             <Button asChild size="lg" className="w-full text-lg font-bold button-glow bg-gradient-to-r from-primary to-accent text-primary-foreground">
-              <Link href="#">
-                💥 QUERO GARANTIR MEU ACESSO
+              <Link href="https://checkout.imperiumpay.app/checkout/cmgubrw8a02lg7c53p4zu2g5a?offer=707M46F">
+                💥 QUERO MEU ACESSO!
               </Link>
             </Button>
           </CardContent>
