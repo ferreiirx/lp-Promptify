@@ -7,6 +7,7 @@ import { Offer } from '@/components/landing/offer';
 import { Guarantee } from '@/components/landing/guarantee';
 import { Faq } from '@/components/landing/faq';
 import { Footer } from '@/components/landing/footer';
+import { Video } from '@/components/landing/video';
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         <Hero />
+        <Video />
         <Benefits />
         <Demo />
         <Testimonials />
