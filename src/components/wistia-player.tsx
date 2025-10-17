@@ -25,7 +25,7 @@ export function WistiaPlayer({ videoId }: { videoId: string }) {
 
   return (
     <>
-      <Script src="https://fast.wistia.com/player.js" async />
+      <Script src="https://fast.wistia.com/player.js" strategy="afterInteractive" />
       <div
         className="wistia_responsive_padding"
         style={{ padding: '56.25% 0 0 0', position: 'relative' }}
@@ -61,6 +61,7 @@ export function WistiaPlayer({ videoId }: { videoId: string }) {
                 }}
                 alt=""
                 aria-hidden="true"
+                onLoad={e => e.currentTarget.parentElement!.style.opacity = '1'}
               />
             </div>
           </div>
