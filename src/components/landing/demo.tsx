@@ -4,7 +4,7 @@ const steps = [
   {
     icon: FileText,
     title: "1. Escolha um Prompt",
-    description: "Selecione um dos nossos prompts prontos ou crie o seu.",
+    description: "Selecione um dos nossos prompts prontos no app.",
   },
   {
     icon: Wand2,
