@@ -12,7 +12,7 @@ export function Video() {
             Aperte o play e descubra como você pode criar conteúdo viral em segundos.
           </p>
         </div>
-        <div className="mx-auto mt-12 max-w-4xl">
+        <div className="mx-auto mt-12 max-w-2xl">
           <div className="overflow-hidden rounded-xl border-2 border-primary/30 shadow-2xl shadow-primary/20">
             <WistiaPlayer mediaId="z8wdcq9z18" />
           </div>
