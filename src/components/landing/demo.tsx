@@ -1,4 +1,4 @@
-import { FileText, Wand2, ArrowRight, Video } from "lucide-react";
+import { FileText, Wand2, ArrowRight, Video, ArrowDown } from "lucide-react";
 
 const steps = [
   {
@@ -42,7 +42,10 @@ export function Demo() {
                   <p className="mt-2 text-muted-foreground">{step.description}</p>
                 </div>
                 {index < steps.length - 1 && (
-                  <ArrowRight className="absolute top-1/2 -right-8 hidden -translate-y-1/2 text-primary/30 md:block" size={48} />
+                  <>
+                    <ArrowRight className="absolute top-1/2 -right-8 hidden -translate-y-1/2 text-primary/30 md:block" size={48} />
+                    <ArrowDown className="absolute left-1/2 -bottom-12 -translate-x-1/2 text-primary/30 md:hidden" size={48} />
+                  </>
                 )}
               </div>
             ))}
