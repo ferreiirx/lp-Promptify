@@ -15,7 +15,9 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         <Hero />
-        <Video />
+        <div className="hidden md:block">
+          <Video />
+        </div>
         <Benefits />
         <Demo />
         <Testimonials />

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { BookOpen, Gift, Smartphone, Wand, Zap } from "lucide-react";
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const banners = [
   { src: "https://i.imgur.com/joKxQdy.png", alt: "Banner Bônus 1" },
@@ -38,6 +39,8 @@ const benefitCards = [
 ];
 
 export function Benefits() {
+  const heroMockup = PlaceHolderImages.find(p => p.id === 'hero-mockup');
+
   return (
     <section id="beneficios" className="bg-black/20 py-20 sm:py-32">
       <div className="container">
@@ -72,6 +75,34 @@ export function Benefits() {
             </div>
           ))}
         </div>
+
+        {/* Imagem Reposicionada (Apenas Mobile) */}
+        <div className="relative mt-16 flex h-full min-h-[250px] w-full items-center justify-center md:hidden">
+            {heroMockup && (
+              <div
+                className="animate-float w-full max-w-lg"
+                style={{ transformStyle: 'preserve-3d' }}
+              >
+                <div
+                  className="transform-gpu transition-transform duration-500 ease-out"
+                  style={{
+                    transform:
+                      'perspective(1000px) rotateY(-15deg) rotateX(5deg)',
+                  }}
+                >
+                  <Image
+                    src={heroMockup.imageUrl}
+                    alt={heroMockup.description}
+                    width={600}
+                    height={450}
+                    data-ai-hint={heroMockup.imageHint}
+                    className="h-auto w-full rounded-xl shadow-2xl shadow-primary/20"
+                  />
+                </div>
+              </div>
+            )}
+        </div>
+
       </div>
     </section>
   );
